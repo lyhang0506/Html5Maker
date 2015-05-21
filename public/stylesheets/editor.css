@@ -1,0 +1,183 @@
+#editor {
+    width: 1920px;
+    height: 1080px;
+    text-align: center;
+    min-width: 1920px;
+}
+input{
+    height: 20px;
+    background: rgb(50,50,50);
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+}
+#editor .menuUl {
+    background-color: #1F1F1F;
+    border: 1px solid #cccccc;
+    white-space: nowrap;
+}
+
+#editor #top {
+    height: 30px;
+}
+
+#editor #editorMain {
+    background-color: #333333;
+    height: 1050px;
+}
+
+#itemDiv .itemLabel {
+    font-size: 16px;
+}
+
+#left1 {
+    width: 160px;
+    height: 1000px;
+    overflow: hidden;
+}
+
+#left1.hidden {
+    width: 40px;
+}
+
+#left2.block {
+    width: 280px;
+}
+
+#editorItemMenu {
+    width: 140px;
+    left: 0;
+    top: 18px;
+    z-index: 1;
+}
+
+#editorItemMenu li {
+    height: 35px;
+    line-height: 35px;
+    vertical-align: middle;
+}
+
+#editor .itemIcon {
+    width: 40px;
+    display: inline-block;
+}
+
+#left2 {
+    width: 200px;
+    height: 1000px;
+}
+
+#center {
+    position: relative;
+    width: 1300px;
+    height: 1000px;
+    border: 2px solid #555555;
+    overflow: hidden;
+}
+
+#option {
+    width: 230px;
+    height: 1000px;
+}
+
+#commonOption {
+}
+#specialOption {
+}
+#workSpaceOption {
+    line-height: 32px;
+}
+#canvasDiv {
+    background-color: #1F1F1F;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+}
+
+
+#itemDiv {
+    background-color: #555555;
+    text-align: left;
+    height: 100%;
+}
+
+#editor #sourceContent {
+    border: 2px solid #555555;
+}
+
+#editor #objContent {
+    border: 2px solid #555555;
+}
+
+#editor #sourceNav {
+    height: 6%;
+    background-color: #555555;
+}
+
+#editor #sourceContent {
+    width: 100%;
+    height: 100%;
+}
+
+#editor #jstree_demo_div {
+    height: 74%;
+}
+
+#editor #preLabel {
+    border: 1px solid #1F1F1F;
+}
+
+.stripes {
+    height: 250px;
+    width: 375px;
+    float: left;
+
+    margin: 10px;
+
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    background-size: 50px 50px; /* 控制条纹的大小 */
+
+    -moz-box-shadow: 1px 1px 8px gray;
+    -webkit-box-shadow: 1px 1px 8px gray;
+    box-shadow: 1px 1px 8px gray;
+}
+
+.checkered {
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #555), color-stop(.25, transparent), to(transparent)), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #555), color-stop(.25, transparent), to(transparent)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #555)), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #555));
+    background-image: -moz-linear-gradient(45deg, #555 25%, transparent 25%, transparent), -moz-linear-gradient(-45deg, #555 25%, transparent 25%, transparent), -moz-linear-gradient(45deg, transparent 75%, #555 75%), -moz-linear-gradient(-45deg, transparent 75%, #555 75%);
+    background-image: -o-linear-gradient(45deg, #555 25%, transparent 25%, transparent), -o-linear-gradient(-45deg, #555 25%, transparent 25%, transparent), -o-linear-gradient(45deg, transparent 75%, #555 75%), -o-linear-gradient(-45deg, transparent 75%, #555 75%);
+    background-image: linear-gradient(45deg, #555 25%, transparent 25%, transparent), linear-gradient(-45deg, #555 25%, transparent 25%, transparent), linear-gradient(45deg, transparent 75%, #555 75%), linear-gradient(-45deg, transparent 75%, #555 75%);
+}
+
+#sourceContentTree {
+    height: 300px;
+}
+#objContentTree {
+    height: 500px;
+}
+#preContent {
+    height: 100px;
+}
+.titleHead{
+    font-size: 14px;
+    width: 60px;
+    height: 26px;
+    line-height: 26px;
+    background: rgba(90,90,90,0.8);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.titleTb{
+    width: 100%;
+    background:  rgba(90,90,90,0.8);
+    line-height: 30px;
+}
+.titleTb .titleTd{
+    width: 44px;
+}
+
+#commonOption input[type="text"] {
+    width: 60px;
+}

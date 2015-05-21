@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+<body>
+<div id="main" class="mc">
+    <!--banner-->
+    <div id="banner" class=" pr ovh mc">
+        <img src="/images/banner.png" alt="logo">
+        <div class="light trans10"></div>
+    </div>
+    <!--中央工程-->
+    <ul id="project" class="ovh">
+        <li class="item create">
+            <form action="/createProject" method="post" id="createForm">
+                <dl>
+                    <dt><h3>NEW PROJECT</h3></dt>
+                    <dd><label><span class="title">工程名</span><input type="text" name="projectName" placeholder="111"></label></dd>
+                    <dd><label><span class="title">标题</span><input type="text" name="projectTitle" placeholder="111"></label></dd>
+                    <dd><label><span class="title">屏幕宽</span><input type="text" name="screenWidth" placeholder="111"></label></dd>
+                    <dd><label><span class="title">屏幕高</span><input type="text" name="screenHeight" placeholder="111"></label></dd>
+                    <dd class="mt20">
+                        <a class="sub lightButton" onclick="document.getElementById('createForm').submit()">生成项目</a>
+                    </dd>
+                </dl>
+            </form>
+        </li>
+        <li class="item pr" id="createJS">
+            <h3>CREATEJS PROJECT</h3>
+            <div class="wrap ovh">
+                <ol id="js_content" class="num pr">
+                    <% for(var i =0;i<projects.length;i++) {%>
+                        <li>
+                            <span><%=projects[i].name%></span>
+                            <div style="float: right;margin-right: 50px">
+                            <a id="edit" href="/editor?path=<%=projects[i].path%>">编辑</a>
+                            <a id="preview" href="<%=projects[i].path%>">预览</a>
+                            </div>
+                        </li>
+                    <%}%>
+                </ol>
+            </div>
+            <div class="scroll">
+                <div id="js_bar" class="handle" ></div>
+            </div>
+        </li>
+        <li class="item">
+            <h3>ABOUT</h3>
+            <p class="text fs18">
+                Html5Maker is a software to let you <br>
+                make a h5 game faster&easier,enjoy it! <br>
+                Web Designer: will <br>
+                Software Designer: lyh
+            </p>
+        </li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript" src="/javascripts/frameWork/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="/javascripts/index.js"></script>
+<script type="text/javascript">
+</script>
+</html>

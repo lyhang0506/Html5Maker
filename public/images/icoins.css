@@ -1,0 +1,26 @@
+/* ----------------------------------------------------
+   created with http://www.codeandweb.com/texturepacker 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:d5f334d0a04ce771cecdd32a9d373c8e:1/1$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(icoins.png);}
+
+.bitmap {width:23px; height:23px; background-position: -95px -28px}
+.bitmapText {width:25px; height:32px; background-position: -68px -2px}
+.button {width:33px; height:24px; background-position: -2px -31px}
+.folder {width:35px; height:27px; background-position: -2px -2px}
+.layer {width:27px; height:27px; background-position: -39px -2px}
+.newFile {width:18px; height:24px; background-position: -143px -26px}
+.refresh {width:29px; height:27px; background-position: -37px -31px}
+.scene {width:22px; height:22px; background-position: -121px -2px}
+.sprite {width:25px; height:25px; background-position: -68px -36px}
+.spriteAnimation {width:21px; height:24px; background-position: -120px -28px}
+.text {width:24px; height:24px; background-position: -95px -2px}
+.unfold {width:16px; height:16px; background-position: -145px -2px}

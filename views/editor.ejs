@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><%= buildProjectJson.config.title %></title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/editor.css">
+    <link rel="stylesheet" href="/stylesheets/base.css">
+</head>
+<body>
+
+<div id="editor">
+    <!----------------------------------header------------------------------------>
+    <div id="top">
+        <div id="header" class="clearfix">
+            <div id="fileDiv" class="fl ml30 pr">
+                <span class="ft18">文件(F)</span>
+                <ul class="ft18 menuUl pa disNone">
+                    <li>保存项目 Ctrl+S</li>
+                    <li>另存为 Ctrl+Shift+S</li>
+                    <li>退出 Alt+F4</li>
+                </ul>
+            </div>
+            <div id="editDiv" class="fl ml30 pr">
+                <span class="ft18">编辑(E)</span>
+                <ul class="ft18 menuUl pa disNone">
+                    <li>撤销 Ctrl+Z</li>
+                    <li>重做 Ctrl+Y</li>
+                </ul>
+            </div>
+            <div id="viewDiv" class="fl ml30 pr">
+                <span class="ft18">视图(v)</span>
+                <ul class="ft18 menuUl pa disNone">
+                    <li>隐藏标尺</li>
+                    <li>清除参考线</li>
+                    <li>锁定参考线</li>
+                    <li>新建参考线</li>
+                </ul>
+            </div>
+            <div id="windowDiv" class="fl ml30 pr">
+                <span class="ft18">窗口(W)</span>
+                <ul class="ft18 menuUl pa disNone">
+                    <li>对象结构</li>
+                    <li>属性</li>
+                    <li>资源</li>
+                    <li>输出</li>
+                    <li>起始页窗口</li>
+                    <li>恢复所有窗口默认布局</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!----------------------------------left------------------------------------>
+    <div id="editorMain">
+
+        <div id="left1" class="fl pr tl">
+            <div id="toggleEditorItemMenu" class="spriteSheet unfold"></div>
+            <!--editorItemMenu-->
+            <ul id="editorItemMenu" class="wrap pa">
+                <li draggable="true" name = "Scene">
+                    <div class="itemIcon">
+                        <div class="spriteSheet scene vm"></div>
+                    </div>
+                    <span class="ml10 itemLabel">Scene</span></li>
+                <li draggable="true" name = "Layer">
+                    <div class="itemIcon">
+                        <div class="spriteSheet layer vm"></div>
+                    </div>
+                    <span class="ml10 itemLabel">Layer</span></li>
+                <li draggable="true" name = "Bitmap">
+                    <div class="itemIcon">
+                        <div class="spriteSheet bitmap vm"></div>
+                    </div>
+                    <span class="ml10 itemLabel">Bitmap</span></li>
+                <li draggable="true" name = "Button">
+                    <div class="itemIcon">
+                        <div class="spriteSheet button vm"></div>
+                    </div>
+                    <span class="ml10 itemLabel">Button</span></li>
+                <li draggable="true" name = "Text">
+                    <div class="itemIcon">
+                        <div class="spriteSheet commonText vm"></div>
+                    </div>
+                    <span class="ml10 itemLabel">Text</span></li>
+                <li draggable="true" name = "BitmapText">
+                    <div class="itemIcon">
+                        <div class="spriteSheet bitmapText vm"></div>
+                    </div>
+                    <span class="ml10 itemLabel">BitmapText</span></li>
+                <li draggable="true" name = "Sprite">
+                    <div class="itemIcon">
+                        <div class="spriteSheet sprite vm"></div>
+                    </div>
+                    <span class="ml10 itemLabel">Sprite</span></li>
+                <li draggable="true" name = "SpriteAnimation">
+                    <div class="itemIcon">
+                        <div class="spriteSheet spriteAnimation vm"></div>
+                    </div>
+                    <span class="ml10 itemLabel">SpriteAnimation</span></li>
+            </ul>
+            <!--editorItemMenu end-->
+        </div>
+        <div id="left2" class="fl tl">
+            <div class="navWrap">
+                <ul>
+                    <li class="dib mr5 navBtn">资源</li>
+                    <li class="dib navBtn">对象结构</li>
+                </ul>
+                <div id="sourceContent" class="navCont">
+                    <div id="sourceNav">
+                            <input type="text"/><br>
+                        <div id="sourceNavButton">
+                            <div class="itemIcon">
+                                <div class="spriteSheet newFile vm"></div>
+                            </div>
+                            <div class="itemIcon">
+                                <div class="spriteSheet folder vm"></div>
+                            </div>
+                            <div class="itemIcon">
+                                <div class="spriteSheet refresh vm"></div>
+                            </div>
+                        </div>
+                        <div id="sourceContentTree" style="line-height: 20px">
+                            <!--<ul class="pl5">
+                                <li pid="#" id="1">
+                                    <span>+</span>123456.html
+                                </li>
+                                <li pid="#" id="2">
+                                    <span>+</span>123.dir
+                                    <ul class="pl5">
+                                        <li pid="2">
+                                            <span>+</span>234.html
+                                        </li>
+                                        <li pid="2">
+                                            <span>+</span>123.html
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>-->
+                        </div>
+                    </div>
+                </div>
+                <div id="objContent" style="display: none" class="navCont">
+                    <div id="objContentTree"></div>
+                </div>
+                <div id="preView">
+                    <div id="preLabel">预览</div>
+                    <div id="preContent">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="center" class="fl checkered stripes">
+            <div id="canvasDiv">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+        <div id="option" class="fl">
+            <div id="workSpaceOption">
+                <div class="titleHead">
+                    工作空间
+                </div>
+                <table class="titleTb">
+                    <tr>
+                        <td class="titleTd">缩放</td>
+                        <td>
+                            <input id="workSpaceRange" class="vm" type="range" name="range" min="0.01" max="2" step="0.01" value="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="titleTd">X轴</td>
+                        <td>
+                            <input id="workSpaceRangeX" type="range" class="vm" name="workSpaceX" min="0" max="100" step="1" value="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="titleTd">Y轴</td>
+                        <td>
+                            <input id="workSpaceRangeY" type="range" class="vm" name="workSpaceY" min="0" max="100" step="1" value="" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="attrOption" class="mt5">
+                <div class="titleHead">
+                    属性
+                </div>
+                <table class="titleTb">
+                    <tr>
+                        <td class="titleTd">Type</td>
+                        <td>
+                            <span>类型</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="titleTd">ViewName</td>
+                        <td>
+                            <input type="text" placeholder="输入视图名字" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="commonOption" class="mt5">
+                <div class="titleHead">
+                    常规
+                </div>
+                <table class="titleTb">
+                    <tr>
+                        <td class="titleTd">Position</td>
+                        <td>
+                            <input type="text" placeholder="x" />
+                        </td>
+                        <td>
+                            <input type="text" placeholder="y" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="titleTd">Size</td>
+                        <td>
+                            <input type="text" placeholder="width" />
+                        </td>
+                        <td>
+                            <input type="text" placeholder="height" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="titleTd">Anchor</td>
+                        <td>
+                            <input type="text" placeholder="regX" />
+                        </td>
+                        <td>
+                            <input type="text" placeholder="regY" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="titleTd"></td>
+                        <td>
+                            <button type="button">center</button>
+                        </td>
+                        <td>
+                            <button type="button">center</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="titleTd">Scale</td>
+                        <td>
+                            <input type="text" placeholder="scaleX" />
+                        </td>
+                        <td>
+                            <input type="text" placeholder="scaleY" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="titleTd">Rotation</td>
+                        <td>
+                            <input type="text" placeholder="degree" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="titleTd">Alpha</td>
+                        <td>
+                            <input type="text" placeholder="scaleY" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="titleTd">Visible</td>
+                        <td class="">
+                            <input type="checkbox" class="vm">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="specialOption"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="/javascripts/frameWork/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="/javascripts/frameWork/jstree.min.js"></script>
+<script type="text/javascript" src="/javascripts/frameWork/createjs8.min.js"></script>
+<script type="text/javascript" src="/javascripts/frameWork/Class.js"></script>
+<script type="text/javascript" src="/javascripts/editor.js"></script>
+<script type="text/javascript" src="/javascripts/initialize.js"></script>
+<script>
+    parseSource('<%=JSON.stringify(sourceJson)%>');
+    parseBuildProject('<%=JSON.stringify(buildProjectJson)%>');
+    initialize();
+</script>
+</html>

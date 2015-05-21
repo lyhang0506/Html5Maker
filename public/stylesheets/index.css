@@ -1,0 +1,318 @@
+/*============================ 引入基本样式表 ============================*/
+@import "base.css";
+
+/*============================ 项目样式内容 ============================*/
+body {
+    background: #1f1f1f;
+    color: #DADADA;
+    font-family: Arail, "microsoft yahei";
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+input, button {
+    outline: 0;
+}
+
+#main {
+    width: 1000px;
+}
+
+#project {
+    margin-top: 100px;
+    font-size: 16px;
+    line-height: 22px;
+    height: 256px;
+    text-shadow: 1px 1px 0 #000;
+}
+
+#project .item {
+    width: 330px;
+    float: left;
+    padding-bottom: 10px;
+}
+
+#project .item:nth-child(2) {
+    margin: 0 5px;
+}
+
+#project h3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+    background: url("../images/footer-cols.png") repeat-x 0 100%;
+    margin-bottom: 20px;
+    text-shadow: 2px 3px 1px #000;
+}
+
+ol.num {
+    list-style: decimal;
+    padding-left: 32px;
+}
+
+#project .title {
+    display: inline-block;
+    vertical-align: middle;
+    width: 84px;
+    margin-right: 18px;
+    text-align: right;
+    text-shadow: 1px 1px 0 #000;
+}
+
+#project .create dd {
+    margin-top: 8px;
+}
+
+#project .create .sub {
+    margin-left: 102px;
+}
+
+#project input {
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #ccc;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -ms-transition: .3s;
+    transition: .3s;
+}
+
+#project input:focus {
+    border-color: #1388ce;
+    box-shadow: 0 0 8px #1388ce;
+}
+
+#project .text {
+    line-height: 30px;
+}
+
+.light {
+    *display: none;
+    position: absolute;
+    left: -190px;
+    top: 0;
+    width: 150px;
+    height: 186px;
+    background-image: -moz-linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    transform: skewX(-25deg);
+    -o-transform: skewx(-25deg);
+    -moz-transform: skewx(-25deg);
+    -webkit-transform: skewx(-25deg);
+    -moz-transition: 0s;
+    -o-transition: 0s;
+    -webkit-transition: 0s;
+    transition: 0s;
+    z-index: 9999;
+}
+
+#banner {
+    width: 726px;
+    margin-top: 60px;
+}
+
+.light {
+    background-image: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    height: 186px;
+    left: -190px;
+    top: 0;
+    transform: skewX(-25deg);
+
+}
+
+#banner:hover .light {
+    left: 900px;
+}
+
+.trans10 {
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    -ms-transition: 1s;
+    transition: 1s;
+}
+
+.trans3 {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -ms-transition: .3s;
+    transition: .3s;
+}
+
+@-webkit-keyframes bluePulse {
+    from {
+        background-color: #007d9a;
+        -webkit-box-shadow: 0 0 9px #333;
+    }
+    50% {
+        background-color: #2daebf;
+        -webkit-box-shadow: 0 0 18px #2daebf;
+    }
+    to {
+        background-color: #007d9a;
+        -webkit-box-shadow: 0 0 9px #333;
+    }
+}
+
+@-moz-keyframes bluePulse {
+    from {
+        background-color: #007d9a;
+        box-shadow: 0 0 9px #333;
+    }
+    50% {
+        background-color: #2daebf;
+        box-shadow: 0 0 18px #2daebf;
+    }
+    to {
+        background-color: #007d9a;
+        box-shadow: 0 0 9px #333;
+    }
+}
+
+.lightButton {
+    cursor: pointer;
+    padding: 5px 20px;
+    color: #FFF;
+    border: none !important;
+    background-color: #238896;
+    -webkit-animation: bluePulse 3s infinite;
+    -moz-animation: bluePulse 3s infinite;
+    -ms-animation: bluePulse 3s infinite;
+    animation: bluePulse 3s infinite;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.lightButton:hover {
+    text-decoration: none;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+#createJS .scroll {
+    position: absolute;
+    right: 20px;
+    top: 66px;
+    width: 0;
+    height: 180px;
+    border-right: 1px solid #eee;
+    z-index: 2;
+}
+
+#createJS .handle {
+    width: 20px;
+    height: 20px;
+    border-right: 40px;
+    background-color: #238896;
+    border: none;
+    border-radius: 20px;
+    -webkit-animation: bluePulse 3s infinite;
+    -moz-animation: bluePulse 3s infinite;
+    -ms-animation: bluePulse 3s infinite;
+    animation: bluePulse 3s infinite;
+    cursor: pointer;
+    left: -9px;
+    position: absolute;
+    top: 76px;
+    z-index: 99;
+}
+
+#createJS li {
+    line-height: 24px;
+}
+
+#createJS .wrap {
+    height: 190px;
+}
+
+a {
+    color: #2daebf;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.spriteSheet {
+    display: inline-block;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-image: url(../images/icoins.png);
+}
+
+.bitmap {
+    width: 23px;
+    height: 23px;
+    background-position: -95px -28px
+}
+
+.bitmapText {
+    width: 25px;
+    height: 32px;
+    background-position: -68px -2px
+}
+
+.button {
+    width: 33px;
+    height: 24px;
+    background-position: -2px -31px
+}
+
+.folder {
+    width: 35px;
+    height: 27px;
+    background-position: -2px -2px
+}
+
+.layer {
+    width: 27px;
+    height: 27px;
+    background-position: -39px -2px
+}
+
+.newFile {
+    width: 18px;
+    height: 24px;
+    background-position: -143px -26px
+}
+
+.refresh {
+    width: 29px;
+    height: 27px;
+    background-position: -37px -31px
+}
+
+.scene {
+    width: 22px;
+    height: 22px;
+    background-position: -121px -2px
+}
+
+.sprite {
+    width: 25px;
+    height: 25px;
+    background-position: -68px -36px
+}
+
+.spriteAnimation {
+    width: 21px;
+    height: 24px;
+    background-position: -120px -28px
+}
+
+.commonText {
+    width: 24px;
+    height: 24px;
+    background-position: -95px -2px
+}
+
+.unfold {
+    width: 16px;
+    height: 16px;
+    background-position: -145px -2px
+}
