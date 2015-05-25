@@ -144,9 +144,13 @@
                     <div id="objContentTree"></div>
                 </div>
                 <div id="preView">
-                    <div id="preLabel">预览</div>
-                    <div id="preContent">
-
+                    <div id="preLabel">
+                        <h1>预览</h1></br>
+                        <h3 id="imgBounds">width*height</h3>
+                        <h3 id="imgCor">x:,y:</h3>
+                    </div>
+                    <div id="preContent" class="preContent">
+                        <canvas id="preCanvas" width="200" height="300"></canvas>
                     </div>
                 </div>
             </div>
@@ -190,13 +194,20 @@
                     <tr>
                         <td class="titleTd">Type</td>
                         <td>
-                            <span>类型</span>
+                            <span id="type">类型</span>
                         </td>
                     </tr>
                     <tr>
                         <td class="titleTd">ViewName</td>
                         <td>
-                            <input type="text" placeholder="输入视图名字" />
+                            <input id="viewName" type="text" placeholder="输入视图名字" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="titleTd"></td>
+                        <td colspan="2" class="tl">
+                            <button id="saveOptionBTN" class="ml15">保存</button>
+                            <button id="deleteEleBTN" class="ml30">删除</button>
                         </td>
                     </tr>
                 </table>
@@ -209,64 +220,73 @@
                     <tr>
                         <td class="titleTd">Position</td>
                         <td>
-                            <input type="text" placeholder="x" />
+                            <input id="x" type="text" placeholder="x" />
                         </td>
                         <td>
-                            <input type="text" placeholder="y" />
+                            <input id="y" type="text" placeholder="y" />
                         </td>
                     </tr>
                     <tr>
                         <td class="titleTd">Size</td>
                         <td>
-                            <input type="text" placeholder="width" />
+                            <input id="width" type="text" placeholder="width" />
                         </td>
                         <td>
-                            <input type="text" placeholder="height" />
+                            <input id="height" type="text" placeholder="height" />
                         </td>
                     </tr>
                     <tr>
                         <td class="titleTd">Anchor</td>
                         <td>
-                            <input type="text" placeholder="regX" />
+                            <input id="regX" type="text" placeholder="regX" />
                         </td>
                         <td>
-                            <input type="text" placeholder="regY" />
+                            <input id="regY" type="text" placeholder="regY" />
                         </td>
                     </tr>
                     <tr>
                         <td class="titleTd"></td>
                         <td>
-                            <button type="button">center</button>
+                            <button id="centerRegXBTN" type="button">center</button>
                         </td>
                         <td>
-                            <button type="button">center</button>
+                            <button id="centerRegYBTN" type="button">center</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="titleTd">Skew</td>
+                        <td>
+                            <input id="skewX" type="text" placeholder="skewX" />
+                        </td>
+                        <td>
+                            <input id="skewY" type="text" placeholder="skewY" />
                         </td>
                     </tr>
                     <tr>
                         <td class="titleTd">Scale</td>
                         <td>
-                            <input type="text" placeholder="scaleX" />
+                            <input id="scaleX" type="text" placeholder="scaleX" />
                         </td>
                         <td>
-                            <input type="text" placeholder="scaleY" />
+                            <input id="scaleY" type="text" placeholder="scaleY" />
                         </td>
                     </tr>
                     <tr>
                         <td class="titleTd">Rotation</td>
                         <td>
-                            <input type="text" placeholder="degree" />
+                            <input id="rotation" type="text" placeholder="degree" />
                         </td>
                     </tr>
                     <tr>
                         <td class="titleTd">Alpha</td>
                         <td>
-                            <input type="text" placeholder="scaleY" />
+                            <input id="alpha" type="text" placeholder="0-1" />
                         </td>
                     </tr>
                     <tr>
                         <td class="titleTd">Visible</td>
-                        <td class="">
-                            <input type="checkbox" class="vm">
+                        <td>
+                            <input id="visible" type="checkbox" class="vm">
                         </td>
                     </tr>
                 </table>
@@ -276,8 +296,8 @@
     </div>
 </div>
 </body>
-<script type="text/javascript" src="/javascripts/frameWork/jquery-2.1.1.js"></script>
-<script type="text/javascript" src="/javascripts/frameWork/jstree.min.js"></script>
+<script type="text/javascript" src="/javascripts/frameWork/MooTools.js"></script>
+<!--<script type="text/javascript" src="/javascripts/frameWork/jstree.min.js"></script>-->
 <script type="text/javascript" src="/javascripts/frameWork/createjs8.min.js"></script>
 <script type="text/javascript" src="/javascripts/frameWork/Class.js"></script>
 <script type="text/javascript" src="/javascripts/editor.js"></script>
